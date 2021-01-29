@@ -1,0 +1,261 @@
+html,body{
+    margin : 0 ; 
+    padding : 0 ; 
+    height : 100vh;
+    color : #fff;
+    font-size : 1rem;
+    font-family: 'Quicksand', sans-serif;
+}
+header{
+    margin : 0;
+    background-color : #242F5E;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding : 15px;
+}
+header>h1{
+
+    letter-spacing: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+form{
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.saisi{
+    flex : 0.6;
+    height: 35px;
+    padding : 15px;
+    font-size : 1.2rem;
+    outline: none ;
+    border : none ; 
+    border-radius: 2px 0px 0px 2px;
+}
+section{
+    height : 50vh;
+    width : 70%;
+    margin : 30px auto;
+    display: flex;
+    background : url('./rainbow-4047523_1920.jpg') no-repeat left;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.icon{
+    width : 50px; 
+    margin : 0;
+    display: inline;
+}
+
+
+
+.container-meteo{
+    background-color:#242F5E;
+    height : 100%;
+    width : 100%;
+    clip-path: polygon(0 0, 68% 0, 100% 100%, 0% 100%);
+    font-weight: bold;
+    padding : 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.meteo{
+    flex : 0.8;
+    display : flex ; 
+    flex-direction: column;
+}
+
+.newsletter-meteo{
+    padding : 25px;
+}
+
+.newsletter-meteo>button{
+    font-size : 1rem;
+    border : none;
+    cursor : pointer ;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 2px;
+    width : 150px;
+    height : 40px;
+   transition : background-color .5s ;
+}
+.newsletter-meteo>button:hover{
+    background-color: #242F5E; 
+    transition :  background-color .5s  ; 
+    color : #ffff;
+}
+.icon-search{
+    width : 25px;
+    position: relative;
+    background-color: #fff;
+    padding-right  : 10px;
+    border-radius: 0px 2px 2px 0px;
+    height: 35px;
+    
+}
+
+.btn-valider{
+    background-color: #fff;
+    color : #242F5E ; 
+    text-align: center;
+    margin-left : 15px;
+    display: flex ; 
+    justify-content: center;
+    align-items: center;
+    padding : 5px;
+    cursor: pointer;
+    width : 100px;
+    border-radius : 25px;
+    transition: background-color .5s color .5s;
+    font-size: 0.8rem;
+    height : 35px;
+    border : 1px solid #fff;
+    outline: none;
+    margin-top : 5px;
+}
+.btn-valider:hover{
+    background-color: #242F5E;
+    color : #fff ; 
+    transition: background-color .5s , color  .5s;
+}
+
+form>div{
+    display: flex;
+}
+
+.modal-newsletter{
+    width : 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding : 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color : #242F5E;
+}
+.modal-newsletter>input[type="email"]{
+    margin : 15px;
+    height: 35px;
+    width : 50%;
+    padding : 5px;
+    font-size : 0.8rem;
+    outline: none ;
+    border-bottom : 5px solid #242F5E;
+    border-top: none;
+    border-right : none;
+    border-left : none;
+
+}
+
+@media(max-width : 850px){
+   header{
+       flex-direction: column;
+   }
+    
+}
+@media(max-width : 650px){
+    section {
+        width : 90%;
+        font-size : 0.6rem;
+    }
+    
+}
+@media(max-width : 360px){
+    .newsletter-meteo>button{
+        font-size : 0.7rem;
+        font-family: 'Quicksand', sans-serif;
+        width : 100px;
+       transition : background-color .5s ;
+    }
+    .newsletter-meteo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section{
+        width  : 100%;
+    }
+    .container-meteo{
+        clip-path: polygon(0 0, 100% 0, 73% 100%, 0% 100%);
+    }
+    
+}
+
+@media(max-width : 321px){
+    .sais{
+        font-size : 0.8rem;
+    
+    }
+    form{
+        width : 100%;
+        display: flex;
+
+    }
+    .btn-valider{
+        
+        border-radius: 2px;
+        height : 25px;
+    }
+    form>div{
+        width : 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    header>h1{
+        font-size : 0.8rem;
+    }
+    header{
+        padding : 5px;
+    }
+    .modal-newsletter>input[type="email"]{
+        font-size : 0.7rem;
+    }
+    .modal-newsletter{
+        width : 100%;
+    }
+    
+}
+
+@media(max-width : 270px){
+    section {
+        display: flex;
+        flex-direction: column;
+        background : none;
+    }
+    .container-meteo{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        display: flex;
+        align-items: center;
+        font-size : 1rem;
+    }
+    .newsletter-meteo{
+        background-color: #242F5E;
+    }   
+    
+}
+
+@media(max-width : 214px){
+    .saisi{
+        font-size : 0.5rem;
+    
+    }
+    footer{
+        font-size : 0.6rem;
+    }
+}

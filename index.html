@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./cloudy.svg">
+    <title>app-meteo</title>
+  </head>
+  <body>
+    <header>
+      <h1><img src="./cloudy.svg" class="icon" alt="" /> App-Meteo</h1>
+      <form>
+        <div> <input type="search" placeholder="Rechercher une ville" class="saisi"/> <img src="./loupe.svg" class="icon-search" alt=""></div>
+        <button type="submit"class="btn-valider">Valider</button>
+      </form>
+    </header>
+    <section>
+      <div class="container-meteo">
+          <div>
+              <span>Météo></span><span class="country"></span>><span class="city"></span>
+          </div>
+          <div class="meteo">
+                <strong>METEO</strong>
+                <strong class="city" style="font-size : 2rem;"></strong>
+                <strong><span class="degre"></span> C° (<span class="condition"></span>)</strong>
+                <strong class="country"></strong>
+          </div>
+          
+      </div>
+      <div class="newsletter-meteo">
+            <button>📧 MétoMail </button>
+      </div>
+    </section>
+    <form class="modal-newsletter" style="display: none;">
+      <p style="cursor: pointer;"title ="Close" class="close-modal">
+        ❌
+      </p>
+        
+        <span>Recevoir la méteo tous les dimanche</span>
+        <input type="email" placeholder="📧Email" required class="mail">
+        <input type="submit" class="send-mail">
+    </form>
+    <footer style="position: fixed; bottom : 0 ; color :#242F5E ; width : 100%; text-align: center; padding :5px;">
+      App-Meteo BY 💪ALEX 💻YOH
+      <span style="transform: rotateY(190deg); display: inline-block"> 💪</span>
+    </footer>
+    <script src="./app.js"></script>
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_LPfpsTmpQshGATxgS0YPY");
+    })();
+  </script>
+  </body>
+</html>
