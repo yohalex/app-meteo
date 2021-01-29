@@ -17,7 +17,7 @@ async function getMeteoByIp(){
                                   .then(resp => resp.json())
                                   .then(resp=> resp.city)
 
-    const getMeteo = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${getLocalisation}&appid=736237848bcf7bcc5d40d913471ccf2a`)
+    const getMeteo = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${getLocalisation}&appid=736237848bcf7bcc5d40d913471ccf2a`)
                            .then(resp=>resp.json())
                            .then(resp=> infosMeteo(resp) )
 
@@ -31,7 +31,7 @@ getMeteoByIp()
 btnValider.addEventListener('click',getMeteoBySearchVille)
 async function getMeteoBySearchVille(e){
     e.preventDefault()
-    const meteo = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${saisi.value}&appid=736237848bcf7bcc5d40d913471ccf2a`)
+    const meteo = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${saisi.value}&appid=736237848bcf7bcc5d40d913471ccf2a`)
                         .then(res=>(res.ok)?res.json() : alert(`La ville n'a pas été trouvé `))
                         .then(resp=> resp)
                         .catch((error)=>{
