@@ -12,6 +12,9 @@ async function getMeteoByIp(){
     const getIpUser = await fetch('https://api.ipify.org?format=json')
                             .then(resp=>resp.json())
                             .then(resp=> resp.ip)
+                            .catch((error)=>{
+                                console.log('Erreur de réseaux)
+                            })
 
     const getLocalisation = await fetch(`https://ipgeolocation.abstractapi.com/v1/?api_key=7a9508a8a4324494ba822367fbc41cb1&ip_address=${getIpUser}`)
                                   .then(resp => resp.json())
